@@ -1,6 +1,8 @@
-FROM alpine:3.7
+FROM ubuntu:18.04
 
-ADD https://github.com/liveuser031/task_answer.sh .
+COPY ["page", "task_answer.sh"] .
+
+EXPOSE 4321:4321
 
 ENTRYPOINT [ "./task_answer.sh" ]
- 
+
