@@ -1,8 +1,5 @@
-FROM ubuntu:18.04
-
-COPY ["page", "task_answer.sh"] .
+FROM alpine:3.7
 
 EXPOSE 4321:4321
 
-ENTRYPOINT [ "./task_answer.sh" ]
-
+ENTRYPOINT while true; do { echo -e 'HTTP/1.1 200 OK\r\n'; echo "I was built $(date)";} | nc -l -p 4321; done 
