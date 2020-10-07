@@ -1,16 +1,11 @@
 # task_answers
-answers for selection quiz to GlobalLogic Kharkiv BaseCamp
+answer for #50 of selection quiz to GlobalLogic Kharkiv BaseCamp
+One-line web server was packed to docker image.
 
-docker container built of it dockerfile works on port 4321.
+Docker container works on port 4321.
 
-unfortunately:
-```
-The push refers to repository [docker.io/liveuser031/task_answers]
-76aafa894f34: Preparing 
-4b07a7bca5b7: Preparing 
-2af0e1f1e531: Preparing 
-bf509d6bc5ec: Preparing 
-88cc1a200eb9: Preparing 
-denied: requested access to the resource is denied
-```
->to make all in the last minute is the worse practice ;(
+Please run the command `docker pull liveuser031/task_answers:latest`
+then `docker run -d --net=host olekspo/task_answer:latest`
+
+In your browser by `http://localhost:4321` you might see some like this:
+`I was built Wed 07 Oct 2020 03:40:03 PM EEST`
